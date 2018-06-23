@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hangman</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Press Any Key To Start</h1>
+
+    <h2>Wins</h2>
+    <div class="wins"> </div>
+
+
+    <h3>current word</h3>
+    <div id="cword"></div>
+
+
+    <h3>Number of Guesses Remaining</h3>
+    <div class="guess-remain"></div>
+
+
+    <h3>Letters Gussed so far</h3>
+    <div class="your-guess"></div>
+
+
+    <script>
+        $(document).ready(function () {
+            var wins = 0;
+            var words = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia", "Herzegovina"];
+            var computerGuess = words[Math.floor(Math.random() * words.length)];
+            var dash = [];
+            var computerletter = computerGuess.split('');
+
+            for (i = 0; i < computerGuess.length; i++) {
+                var letter = computerGuess[i];
+                dash += "- ";
+            }
+                document.onkeyup = function(event) {
+                var userInput = event.key;
+                if (computerletter.includes(userInput)) {
+
+                }
+            // for (var j = 0; j < dash.length; j++) {
+            //     if ()
+            // }
+
+            }   
+            
+            document.getElementById("cword").innerHTML = dash;
+
+            //$( "#crowd" ).keyup(function() {
+            //var userInput = key.value;
+            // if (compputerlatter === )
+            //});  
+            //var userGuess = "";
+            // document.onkeyup = function (event) {
+
+            //  var userGuess = event.key;
+
+            //  if (userGuess === computerlatter) {
+            //      dash = userGuess.valueOf;
+            //     // document.getElementById("cword").innerHTML = dash;
+            //  alert(dash);
+            //  }
+
+            //  }
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
